@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: api
+  namespace: cloudacademy
   labels:
     app: api
 spec:
@@ -20,6 +21,6 @@ spec:
         imagePullPolicy: IfNotPresent
         env:
         - name: MONGO_CONN_STR
-          value: "mongodb://mongo-0.mongo,mongo-1.mongo,mongo-2.mongo:27017/languages"
+          value: "mongodb://mongo-0.mongo,mongo-1.mongo,mongo-2.mongo:27017/langdb"
         ports:
         - containerPort: 8080

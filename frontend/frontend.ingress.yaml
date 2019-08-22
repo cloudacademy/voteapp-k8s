@@ -2,6 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: frontend-ingress
+  namespace: cloudacademy
 spec:
  rules:
  - host: frontend.X.X.X.X.nip.io

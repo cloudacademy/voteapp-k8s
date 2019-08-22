@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongo
+  namespace: cloudacademy
   labels:
     name: mongo
 spec:
@@ -16,6 +17,7 @@ apiVersion: apps/v1beta1
 kind: StatefulSet
 metadata:
   name: mongo
+  namespace: cloudacademy
 spec:
   serviceName: mongo
   replicas: 3
@@ -60,6 +62,7 @@ spec:
   volumeClaimTemplates:
   - metadata:
       name: mongodb-persistent-storage-claim
+      namespace: cloudacademy
       annotations:
         volume.beta.kubernetes.io/storage-class: "standard"
     spec:
