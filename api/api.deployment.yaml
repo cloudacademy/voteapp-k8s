@@ -24,3 +24,9 @@ spec:
           value: "mongodb://mongo-0.mongo,mongo-1.mongo,mongo-2.mongo:27017/langdb"
         ports:
         - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /ok
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 5
