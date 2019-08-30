@@ -11,7 +11,7 @@ spec:
     targetPort: 27017
   clusterIP: None
   selector:
-    role: mongo
+    app: mongo
 ---
 apiVersion: apps/v1beta1
 kind: StatefulSet
@@ -24,9 +24,9 @@ spec:
   template:
     metadata:
       labels:
-        role: mongo
-        environment: test
-        replicaset: MainRepSet
+        app: mongo
+        env: demo
+        replicaset: rs0.main
     spec:
       affinity:
         podAntiAffinity:
@@ -38,7 +38,7 @@ spec:
                 - key: replicaset
                   operator: In
                   values:
-                  - MainRepSet
+                  - rs0.main
               topologyKey: kubernetes.io/hostname
       terminationGracePeriodSeconds: 10
       containers:

@@ -1,8 +1,11 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: api-ingress
+  name: api.ingress
   namespace: cloudacademy
+  labels:
+    app: api.ingress
+    env: demo
 spec:
  rules:
  - host: api.X.X.X.X.nip.io
@@ -10,5 +13,5 @@ spec:
      paths:
      - path: /
        backend:
-         serviceName: apiservice
+         serviceName: api.service
          servicePort: 8080

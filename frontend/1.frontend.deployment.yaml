@@ -5,6 +5,7 @@ metadata:
   namespace: cloudacademy
   labels:
     app: frontend
+    env: demo
 spec:
   replicas: 2
   selector:

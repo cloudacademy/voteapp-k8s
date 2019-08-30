@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: frontend-ingress
+  name: frontend.ingress
   namespace: cloudacademy
 spec:
  rules:
@@ -10,5 +10,5 @@ spec:
      paths:
      - path: /
        backend:
-         serviceName: frontendservice
+         serviceName: frontend.service
          servicePort: 80
