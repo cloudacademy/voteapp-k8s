@@ -1,12 +1,12 @@
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: allow.mongo.from.api
+  name: allow-to-mongo-from-api
   namespace: cloudacademy
 spec:
   podSelector:
     matchLabels:
-      app: mongo
+      role: db
   ingress:
   - from:
       - podSelector:

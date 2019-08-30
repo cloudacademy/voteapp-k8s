@@ -4,17 +4,17 @@ metadata:
   name: api
   namespace: cloudacademy
   labels:
-    app: api
+    role: api
     env: demo
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: api
+      role: api
   template:
     metadata:
       labels:
-        app: api
+        role: api
     spec:
       containers:
       - name: api

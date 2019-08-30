@@ -4,17 +4,17 @@ metadata:
   name: frontend
   namespace: cloudacademy
   labels:
-    app: frontend
+    role: frontend
     env: demo
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: frontend
+      role: frontend
   template:
     metadata:
       labels:
-        app: frontend
+        role: frontend
     spec:
       containers:
       - name: frontend
