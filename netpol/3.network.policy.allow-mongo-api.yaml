@@ -11,4 +11,4 @@ spec:
   - from:
       - podSelector:
           matchLabels:
-            app: api
+            role: api
