@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: cloudacademy/api:latest
+        image: cloudacademydevops/api:v1
         imagePullPolicy: IfNotPresent
         env:
         - name: MONGO_CONN_STR
