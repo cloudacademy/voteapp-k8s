@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: cloudacademydevops/frontend:v1
+        image: cloudacademy/frontend:v1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
